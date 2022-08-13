@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EternalStorage",
+  "sourceName": "contracts/modules/bridgeModules/utils/EternalStorage.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122088585f451816c5125b880629a481f9b26dc3eccd64348975abc944988cd2665064736f6c634300080f0033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122088585f451816c5125b880629a481f9b26dc3eccd64348975abc944988cd2665064736f6c634300080f0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
