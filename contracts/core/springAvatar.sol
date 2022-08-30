@@ -4,12 +4,12 @@ import "@gnosis.pm/safe-contracts/contracts/base/Executor.sol";
 import "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "../avatars/permissionReg/IPermissionRegistry.sol";
-import "./permissionRegHandler.sol";
+import "../roleComponent/permissionReg/IPermissionRegistry.sol";
+import "../roleComponent/permissionRegHandler.sol";
 
 /// @title Spring Avatar
 /// @author Markus Jungnickel
-/// @notice This contract is heavily based on the module manager used in Gnosis Safe
+/// @notice Avatar contract implementing Zodiac standard. Based on the module manager used in Gnosis Safe
 abstract contract springAvatar is
     IAvatar,
     Enum,

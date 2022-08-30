@@ -4,6 +4,9 @@ pragma solidity ^0.8.6;
 import "@gnosis.pm/safe-contracts/contracts/base/Executor.sol";
 import "hardhat/console.sol";
 
+/// @title Dummy Avatar
+/// @author Markus Jungnickel
+/// @notice Heavily based on Gnosis Safe implementation
 contract dummyAvatar is Executor {
     bool testSuccessful = false;
 

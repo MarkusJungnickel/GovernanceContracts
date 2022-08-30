@@ -7,6 +7,8 @@ import "hardhat/console.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "./settingsModuleHandler.sol";
 
+/// @title Spring Modifier
+/// @notice Modifier Contract implementing Zodia standard
 abstract contract springModifier is
     springModule,
     springAvatar,

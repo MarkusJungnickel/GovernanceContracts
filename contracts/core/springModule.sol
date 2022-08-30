@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-/// @title Multi Avatar Module Interface - A contract that can pass messages to a Module Manager contract if enabled by that contract.
-/// @notice The interface is based on the module interface build by Zodiac
 pragma solidity >=0.7.0 <0.9.0;
 
 import "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
@@ -10,10 +8,11 @@ import "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "hardhat/console.sol";
-import "./permissionRegHandler.sol";
+import "../roleComponent/permissionRegHandler.sol";
 
-// SHOULD IMPLEMENT THIS AS A LINKED LIST - LIKE THE AVATAR DOES FOR avatars
-
+/// @title Spring Module
+/// @author Markus Jungnickel
+/// @notice Module contract implementing Zodiac standard. Based on Zodiac sample Module
 abstract contract springModule is
     OwnableUpgradeable,
     Guardable,

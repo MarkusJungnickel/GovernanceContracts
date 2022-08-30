@@ -2,8 +2,11 @@
 pragma solidity ^0.8.6;
 
 import "hardhat/console.sol";
-import "../modules/bridgeModules/bridgeProxyLogic.sol";
+import "../bridgeComponent/bridgeProxyLogic.sol";
 
+/// @title Dummy Bridge
+/// @author Markus Jungnickel
+/// @notice Based on Token Bridge Mediator Contract
 contract dummyBridge {
     function requireToPassMessage(
         address payable _contract,
