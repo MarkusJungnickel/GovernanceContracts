@@ -1,6 +1,18 @@
-Initial Deployment
+# Governance Model Implementation
+
+## Contracts
+
+The contracts are ordered by components. The core folder contains the abstract contracts implementing the Zodiac interfaces.
+
+## Pre-Deployment Testing
+
+Run all tests in the Hardhat Network by calling "yarn hardhat test"
+
+## Deployment
 
 First the contracts are deployed and the deployer address receives admin control. Once the contracts have been deployed, they are configured, by giving them access to each other and removing the deployers admin control.
+
+The scripts need to be run in this order:
 
 1. Deploy the permission registry
    - Registry Logic
@@ -35,3 +47,7 @@ First the contracts are deployed and the deployer address receives admin control
     - enable proxy logic rinkeby
 11. Add permission reg to contracts
 12. Enable Timelock on bridge proxies xDai
+
+## Post-Deployment Testing
+
+The scripts folder includes testing scripts for the deployed smart contracts to test functionalities that could not be tested well in the Hardhat Network.
