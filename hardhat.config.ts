@@ -4,9 +4,9 @@
 import "@nomiclabs/hardhat-ethers";
 import "@openzeppelin/hardhat-upgrades";
 import { PROVIDER_RINKEBY, PROVIDER_XDAI } from "./constants";
+import { PRIVATE_KEY_DEPLOYER } from "./privateKeys";
 
-const Private_Key =
-  "7168c840b9a4dde432e092e270c7a189d75d4a6b9a7af5152ad281397f874c2d";
+require("hardhat-contract-sizer");
 
 module.exports = {
   solidity: {
@@ -33,11 +33,17 @@ module.exports = {
   networks: {
     rinkeby: {
       url: PROVIDER_RINKEBY,
-      accounts: [`0x${Private_Key}`],
+      accounts: [`0x${PRIVATE_KEY_DEPLOYER}`],
     },
     xDai: {
       url: PROVIDER_XDAI,
-      accounts: [`0x${Private_Key}`],
+      accounts: [`0x${PRIVATE_KEY_DEPLOYER}`],
     },
+  },
+  contractSizer: {
+    alphaSort: true,
+    disambiguatePaths: false,
+    runOnCompile: true,
+    strict: true,
   },
 };

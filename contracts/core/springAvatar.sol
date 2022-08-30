@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.6;
-import "hardhat/console.sol";
 import "@gnosis.pm/safe-contracts/contracts/base/Executor.sol";
 import "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol";

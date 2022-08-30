@@ -1,3 +1,6 @@
 node_modules
 privateKeys.ts
 old
+cache
+ABIs
+*.icloud
