@@ -2,7 +2,6 @@ import { ethers } from "hardhat";
 import Web3 from "web3";
 import { PERMISSION_REG_ABI } from "../../ABIs/PERMISSION_REG_ABI";
 import {
-  BRIDGE_PROXY_ADDRESS_RINKEBY_PERM,
   PERMISSION_REG_PROXY_ADDRESS,
   PROVIDER_RINKEBY,
 } from "../../constants";
@@ -26,11 +25,11 @@ async function main() {
   const [deployer] = await ethers.getSigners();
 
   let gas_3 = await reg.methods
-    .enableModule(BRIDGE_PROXY_ADDRESS_RINKEBY_PERM)
+    .enableModule("0x4e5199B4737427C0516E08F19a22f562B69F6371")
     .estimateGas();
   gas_3 = Math.trunc(gas_3 * 1.1);
   const transaction_3 = reg.methods.enableModule(
-    BRIDGE_PROXY_ADDRESS_RINKEBY_PERM
+    "0x4e5199B4737427C0516E08F19a22f562B69F6371"
   );
   console.log("pre Transaction...");
   await sendTransaction(PERMISSION_REG_PROXY_ADDRESS, transaction_3, gas_3);

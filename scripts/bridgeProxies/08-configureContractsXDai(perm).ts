@@ -38,11 +38,11 @@ async function main() {
     ]
   );
 
-  // let gas_1 = await proxy.methods.initialize(parametersProxy).estimateGas();
-  // gas_1 = Math.trunc(gas_1 * 1.1);
-  // const transaction_1 = proxy.methods.initialize(parametersProxy);
-  // console.log("pre Transaction...");
-  // await sendTransaction(BRIDGE_PROXY_ADDRESS_XDAI_PERM, transaction_1, gas_1);
+  let gas_1 = await proxy.methods.initialize(parametersProxy).estimateGas();
+  gas_1 = Math.trunc(gas_1 * 1.1);
+  const transaction_1 = proxy.methods.initialize(parametersProxy);
+  console.log("pre Transaction...");
+  await sendTransaction(BRIDGE_PROXY_ADDRESS_XDAI_PERM, transaction_1, gas_1);
 
   // let gas_2 = await proxy.methods
   //   .enableModule(DUMMY_MODULE_ADDRESS_XDAI)
@@ -60,13 +60,13 @@ async function main() {
   console.log("pre Transaction...");
   await sendTransaction(BRIDGE_PROXY_ADDRESS_XDAI_PERM, transaction_3, gas_3);
 
-  // let gas_5 = await proxy.methods.setRequestGasLimit(3000000).estimateGas();
-  // gas_5 = Math.trunc(gas_5 * 1.1);
-  // const transaction_5 = proxy.methods.setRequestGasLimit(3000000);
-  // console.log("pre Transaction...");
-  // await sendTransaction(BRIDGE_PROXY_ADDRESS_XDAI_PERM, transaction_5, gas_5);
+  let gas_5 = await proxy.methods.setRequestGasLimit(3000000).estimateGas();
+  gas_5 = Math.trunc(gas_5 * 1.1);
+  const transaction_5 = proxy.methods.setRequestGasLimit(3000000);
+  console.log("pre Transaction...");
+  await sendTransaction(BRIDGE_PROXY_ADDRESS_XDAI_PERM, transaction_5, gas_5);
 
-  // console.log(await proxy.methods.requestGasLimit().call());
+  console.log(await proxy.methods.requestGasLimit().call());
 }
 
 main()

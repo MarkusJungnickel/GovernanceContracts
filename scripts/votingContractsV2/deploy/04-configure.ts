@@ -12,7 +12,7 @@ import {
   TIMELOCK_V2_ADDRESS,
   TOKEN_ADDRESS,
 } from "../../../constants";
-import { PRIVATE_KEY_USER_2 } from "../../../privateKeys";
+import { PRIVATE_KEY_USER_1 } from "../../../privateKeys";
 
 // Set Provider and Wallet
 
@@ -21,7 +21,7 @@ const web3 = new Web3(PROVIDER_XDAI);
 const account2 = "0xa453E7a4bDe94B7A10F1a012832F471d6f5C80c3";
 const account3 = "0x400b95309b2EfFbE5C7a6c2e0088f0dd5f55B7d6";
 const account = web3.eth.accounts.privateKeyToAccount(
-  "0x" + PRIVATE_KEY_USER_2
+  "0x" + PRIVATE_KEY_USER_1
 );
 web3.eth.accounts.wallet.add(account);
 web3.eth.defaultAccount = account.address;
@@ -36,14 +36,14 @@ async function main() {
 
   // let gas_1 = await timelock.methods
   //   .initialize(
-  //     30,
+  //     15,
   //     [GOVERNOR_V2_ADDRESS, deployer.address],
   //     [GOVERNOR_V2_ADDRESS, deployer.address]
   //   )
   //   .estimateGas();
   // gas_1 = Math.trunc(gas_1 * 1.1);
   // const transaction_1 = timelock.methods.initialize(
-  //   30,
+  //   15,
   //   [GOVERNOR_V2_ADDRESS, deployer.address],
   //   [GOVERNOR_V2_ADDRESS, deployer.address]
   // );
@@ -101,9 +101,9 @@ async function main() {
   // console.log("pre Transaction...");
   // await sendTransaction(TOKEN_ADDRESS, transaction_8, gas_8);
 
-  // let gas_9 = await token.methods.mint(account3, 10000).estimateGas();
+  // let gas_9 = await token.methods.mint(account3, 1).estimateGas();
   // gas_9 = Math.trunc(gas_9 * 1.1);
-  // const transaction_9 = token.methods.mint(account3, 10000);
+  // const transaction_9 = token.methods.mint(account3, 1);
   // console.log("pre Transaction...");
   // await sendTransaction(TOKEN_ADDRESS, transaction_9, gas_9);
 
@@ -113,17 +113,17 @@ async function main() {
   // console.log("pre Transaction...");
   // await sendTransaction(TOKEN_ADDRESS, transaction_10, gas_10);
 
-  // let gas_11 = await token.methods.delegate(account2).estimateGas();
-  // gas_11 = Math.trunc(gas_11 * 1.1);
-  // const transaction_11 = token.methods.delegate(account2);
-  // console.log("pre Transaction...");
-  // await sendTransaction(TOKEN_ADDRESS, transaction_11, gas_11);
-
-  let gas_12 = await token.methods.delegate(account3).estimateGas();
-  gas_12 = Math.trunc(gas_12 * 1.1);
-  const transaction_12 = token.methods.delegate(account3);
+  let gas_11 = await token.methods.delegate(account2).estimateGas();
+  gas_11 = Math.trunc(gas_11 * 1.1);
+  const transaction_11 = token.methods.delegate(account2);
   console.log("pre Transaction...");
-  await sendTransaction(TOKEN_ADDRESS, transaction_12, gas_12);
+  await sendTransaction(TOKEN_ADDRESS, transaction_11, gas_11);
+
+  // let gas_12 = await token.methods.delegate(account3).estimateGas();
+  // gas_12 = Math.trunc(gas_12 * 1.1);
+  // const transaction_12 = token.methods.delegate(account3);
+  // console.log("pre Transaction...");
+  // await sendTransaction(TOKEN_ADDRESS, transaction_12, gas_12);
 
   console.log(Number(await token.methods.balanceOf(account3).call()));
 }
@@ -143,7 +143,7 @@ async function sendTransaction(to: string, transaction: any, gasEstimate: any) {
   };
   const signed = await web3.eth.accounts.signTransaction(
     options,
-    PRIVATE_KEY_USER_2
+    PRIVATE_KEY_USER_1
   );
   console.log("Sending Transaction...");
   const receipt = await web3.eth
