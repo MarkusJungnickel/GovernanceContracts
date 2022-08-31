@@ -8,7 +8,7 @@ import "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "hardhat/console.sol";
-import "../roleComponent/permissionRegHandler.sol";
+import "../roleComponent/permissionReg/permissionRegHandler.sol";
 
 /// @title Spring Module
 /// @author Markus Jungnickel
