@@ -1,5 +1,13 @@
 # Governance Model Implementation
 
+## Background
+
+This repository was created for the purpose of my Master Thesis on Protocol/DAO Governance. It contains the smart contracts used to implement the governance model. See a summary of the thesis [here]((./SpringDAO_PPT_Final.pdf)).
+
+## Test Website
+
+You can test the contracts via [this](./https://main.druh7epd3cpu6.amplifyapp.com/) website.
+
 ## Contracts
 
 The contracts are ordered by components. The core folder contains the abstract contracts implementing the Zodiac interfaces.
