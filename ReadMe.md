@@ -2,7 +2,7 @@
 
 ## Background
 
-This repository was created for the purpose of my Master Thesis on Protocol/DAO Governance. It contains the smart contracts used to implement the governance model. See a summary of the thesis [here]((./SpringDAO_PPT_Final.pdf)).
+This repository was created for the purpose of my Master Thesis on Protocol/DAO Governance. It contains the smart contracts used to implement the governance model. See a summary of the thesis [here](./SpringDAO_PPT_Final.pdf).
 
 ## Test Website
 
