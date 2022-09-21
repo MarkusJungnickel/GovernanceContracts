@@ -6,7 +6,7 @@ This repository was created for the purpose of my Master Thesis on Protocol/DAO 
 
 ## Test Website
 
-You can test the contracts via [this](./https://main.druh7epd3cpu6.amplifyapp.com/) website.
+You can test the contracts via [this](https://main.druh7epd3cpu6.amplifyapp.com/) website.
 
 ## Contracts
 
